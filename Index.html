@@ -33,7 +33,6 @@
             padding: 0 20px;
         }
         
-        /* Header Styles */
         header {
             background: linear-gradient(135deg, var(--primary), var(--secondary));
             color: white;
@@ -71,14 +70,8 @@
             color: white;
             text-decoration: none;
             font-weight: 500;
-            transition: opacity 0.3s;
         }
         
-        .nav-links a:hover {
-            opacity: 0.8;
-        }
-        
-        /* Hero Section */
         .hero {
             padding: 4rem 0;
             text-align: center;
@@ -91,31 +84,16 @@
             margin-bottom: 1rem;
         }
         
-        .hero p {
-            font-size: 1.2rem;
-            max-width: 700px;
-            margin: 0 auto 2rem;
-        }
-        
         .btn {
-            display: inline-block;
             background: var(--accent);
             color: white;
             padding: 0.8rem 1.5rem;
             border-radius: 50px;
             text-decoration: none;
-            font-weight: 600;
-            transition: all 0.3s;
-            border: none;
-            cursor: pointer;
+            display: inline-block;
+            margin-top: 1rem;
         }
         
-        .btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-        }
-        
-        /* Features Grid */
         .features {
             padding: 5rem 0;
         }
@@ -123,12 +101,6 @@
         .section-title {
             text-align: center;
             margin-bottom: 3rem;
-        }
-        
-        .section-title h2 {
-            font-size: 2.5rem;
-            color: var(--secondary);
-            margin-bottom: 1rem;
         }
         
         .features-grid {
@@ -139,14 +111,9 @@
         
         .feature-card {
             background: white;
-            border-radius: 10px;
             padding: 2rem;
+            border-radius: 10px;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-            transition: transform 0.3s;
-        }
-        
-        .feature-card:hover {
-            transform: translateY(-10px);
         }
         
         .feature-icon {
@@ -157,12 +124,11 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            margin-bottom: 1.5rem;
+            margin-bottom: 1rem;
             color: white;
             font-size: 1.8rem;
         }
         
-        /* Articles Section */
         .articles {
             background: var(--light);
             padding: 5rem 0;
@@ -177,127 +143,29 @@
         .article-card {
             background: white;
             border-radius: 10px;
-            overflow: hidden;
+            padding: 1.5rem;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-            transition: transform 0.3s;
         }
         
-        .article-card:hover {
-            transform: translateY(-5px);
-        }
-        
-        .article-image {
-            height: 200px;
-            background: linear-gradient(45deg, var(--primary), var(--accent));
-            display: flex;
-            align-items: center;
-            justify-content: center;
+        .ai-status {
+            background: var(--success);
             color: white;
-            font-size: 3rem;
-        }
-        
-        .article-content {
-            padding: 1.5rem;
-        }
-        
-        .article-content h3 {
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            display: inline-block;
             margin-bottom: 1rem;
-            color: var(--secondary);
         }
         
-        .article-meta {
-            display: flex;
-            justify-content: space-between;
-            color: #666;
-            font-size: 0.9rem;
-            margin-top: 1rem;
-        }
-        
-        /* AI Dashboard */
-        .dashboard {
-            background: white;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            margin: 2rem 0;
-        }
-        
-        .dashboard-header {
-            background: var(--dark);
-            color: white;
-            padding: 1rem 2rem;
-        }
-        
-        .metrics {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1rem;
-            padding: 2rem;
-        }
-        
-        .metric-card {
-            background: #f8f9fa;
-            padding: 1.5rem;
-            border-radius: 8px;
-            text-align: center;
-        }
-        
-        .metric-value {
-            font-size: 2rem;
-            font-weight: 700;
-            color: var(--primary);
-        }
-        
-        /* Footer */
         footer {
             background: var(--dark);
             color: white;
-            padding: 3rem 0 1.5rem;
-            margin-top: 4rem;
-        }
-        
-        .footer-content {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-bottom: 2rem;
-        }
-        
-        .copyright {
+            padding: 3rem 0;
             text-align: center;
-            padding-top: 1.5rem;
-            border-top: 1px solid #495057;
-            color: #adb5bd;
-        }
-
-        /* Adsense Placeholders */
-        .ad-unit {
-            background: #f8f9fa;
-            border: 2px dashed #dee2e6;
-            padding: 2rem;
-            text-align: center;
-            margin: 2rem 0;
-            border-radius: 8px;
         }
         
-        .ad-label {
-            color: #6c757d;
-            font-size: 0.9rem;
-            margin-bottom: 0.5rem;
-        }
-
         @media (max-width: 768px) {
-            .nav-links {
-                display: none;
-            }
-            
-            .hero h1 {
-                font-size: 2.2rem;
-            }
-            
-            .metrics {
-                grid-template-columns: 1fr;
-            }
+            .nav-links { display: none; }
+            .hero h1 { font-size: 2rem; }
         }
     </style>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
@@ -314,7 +182,6 @@
                     <li><a href="#home">Home</a></li>
                     <li><a href="#articles">Articles</a></li>
                     <li><a href="#ai">AI Technology</a></li>
-                    <li><a href="#digital">Digital Marketing</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
@@ -323,49 +190,41 @@
 
     <section class="hero" id="home">
         <div class="container">
-            <h1>AI-Powered Content That Dominates Search</h1>
-            <p>Neuraticles delivers cutting-edge AI technology and digital marketing insights that drive real traffic and revenue</p>
-            <a href="#articles" class="btn">Read Latest Articles</a>
-        </div>
-    </section>
-
-    <!-- Adsense Header Unit -->
-    <div class="container">
-        <div class="ad-unit">
-            <div class="ad-label">Advertisement</div>
-            <div style="height: 90px; background: #e9ecef; display: flex; align-items: center; justify-content: center; border-radius: 4px;">
-                Google Adsense Banner (728x90)
+            <h1>Fully Automated AI Content Empire</h1>
+            <p>Your blog runs 24/7 with zero manual work. AI writes, publishes, and optimizes for maximum traffic.</p>
+            <div class="ai-status">
+                <i class="fas fa-robot"></i> AI System: ACTIVE
             </div>
         </div>
-    </div>
+    </section>
 
     <section class="features">
         <div class="container">
             <div class="section-title">
-                <h2>Why Neuraticles Ranks #1</h2>
-                <p>Advanced AI technology meets proven digital marketing strategies</p>
+                <h2>How Our AI Automation Works</h2>
+                <p>Zero manual intervention - fully autonomous</p>
             </div>
             <div class="features-grid">
                 <div class="feature-card">
                     <div class="feature-icon">
                         <i class="fas fa-robot"></i>
                     </div>
-                    <h3>AI-Optimized Content</h3>
-                    <p>Every article is engineered by advanced AI to maximize SEO performance and reader engagement.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-chart-line"></i>
-                    </div>
-                    <h3>Traffic-Proven Topics</h3>
-                    <p>We analyze millions of data points to identify high-traffic opportunities before they trend.</p>
+                    <h3>AI Content Generation</h3>
+                    <p>Every 6 hours, AI automatically researches trends and writes SEO-optimized articles.</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">
                         <i class="fas fa-bolt"></i>
                     </div>
-                    <h3>Lightning Fast</h3>
-                    <p>Optimized for Core Web Vitals and mobile-first indexing. Google loves our site structure.</p>
+                    <h3>Auto-Publishing</h3>
+                    <p>Articles are automatically formatted and published to your website.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Traffic Optimization</h3>
+                    <p>AI analyzes performance and optimizes content strategy for maximum growth.</p>
                 </div>
             </div>
         </div>
@@ -375,164 +234,29 @@
         <div class="container">
             <div class="section-title">
                 <h2>Latest AI-Generated Articles</h2>
-                <p>Fresh content published daily to dominate search results</p>
+                <p>Fresh content published automatically every 6 hours</p>
             </div>
-            
-            <!-- Adsense In-Article Unit -->
-            <div class="ad-unit">
-                <div class="ad-label">Advertisement</div>
-                <div style="height: 250px; background: #e9ecef; display: flex; align-items: center; justify-content: center; border-radius: 4px;">
-                    Google Adsense Rectangle (300x250)
-                </div>
-            </div>
-
-            <div class="articles-grid">
-                <!-- Article 1 -->
+            <div class="articles-grid" id="articles-container">
                 <div class="article-card">
-                    <div class="article-image">
-                        <i class="fas fa-robot"></i>
-                    </div>
-                    <div class="article-content">
-                        <h3>10 AI Tools That Will Dominate 2024</h3>
-                        <p>Discover the revolutionary AI technologies that are set to transform digital marketing and content creation forever.</p>
-                        <div class="article-meta">
-                            <span><i class="far fa-clock"></i> 5 min read</span>
-                            <span><i class="far fa-calendar"></i> Dec 10, 2024</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Article 2 -->
-                <div class="article-card">
-                    <div class="article-image">
-                        <i class="fas fa-search"></i>
-                    </div>
-                    <div class="article-content">
-                        <h3>SEO Strategies That Actually Work in 2024</h3>
-                        <p>Google's algorithms have changed. Learn the new rules of SEO that drive organic traffic in the AI era.</p>
-                        <div class="article-meta">
-                            <span><i class="far fa-clock"></i> 7 min read</span>
-                            <span><i class="far fa-calendar"></i> Dec 9, 2024</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Article 3 -->
-                <div class="article-card">
-                    <div class="article-image">
-                        <i class="fas fa-wallet"></i>
-                    </div>
-                    <div class="article-content">
-                        <h3>How to Monetize AI Content with Adsense</h3>
-                        <p>Proven strategies to maximize your Google Adsense revenue with AI-generated content that converts.</p>
-                        <div class="article-meta">
-                            <span><i class="far fa-clock"></i> 6 min read</span>
-                            <span><i class="far fa-calendar"></i> Dec 8, 2024</span>
-                        </div>
-                    </div>
+                    <h3>🤖 AI System Initializing...</h3>
+                    <p>The AI content generator is starting up. First articles will appear within hours.</p>
+                    <p><em>Next auto-publish: Soon</em></p>
                 </div>
             </div>
         </div>
     </section>
-
-    <!-- AI Dashboard Section -->
-    <section class="features" id="ai">
-        <div class="container">
-            <div class="section-title">
-                <h2>Live AI Performance Dashboard</h2>
-                <p>Real-time analytics showing our AI content domination</p>
-            </div>
-            
-            <div class="dashboard">
-                <div class="dashboard-header">
-                    <h3><i class="fas fa-chart-bar"></i> Neuraticles AI Analytics</h3>
-                </div>
-                <div class="metrics">
-                    <div class="metric-card">
-                        <div class="metric-value">12,847</div>
-                        <div>Monthly Visitors</div>
-                    </div>
-                    <div class="metric-card">
-                        <div class="metric-value">47</div>
-                        <div>Articles Published</div>
-                    </div>
-                    <div class="metric-card">
-                        <div class="metric-value">₨8,429</div>
-                        <div>Estimated Monthly Revenue</div>
-                    </div>
-                    <div class="metric-card">
-                        <div class="metric-value">94%</div>
-                        <div>SEO Performance Score</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Adsense Bottom Unit -->
-    <div class="container">
-        <div class="ad-unit">
-            <div class="ad-label">Advertisement</div>
-            <div style="height: 90px; background: #e9ecef; display: flex; align-items: center; justify-content: center; border-radius: 4px;">
-                Google Adsense Banner (728x90)
-            </div>
-        </div>
-    </div>
 
     <footer id="contact">
         <div class="container">
-            <div class="footer-content">
-                <div>
-                    <h3>Neuraticles</h3>
-                    <p>AI-powered content generation platform dominating search results since 2024.</p>
-                </div>
-                <div>
-                    <h3>Quick Links</h3>
-                    <ul>
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#articles">Articles</a></li>
-                        <li><a href="#ai">AI Technology</a></li>
-                        <li><a href="#digital">Digital Marketing</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h3>Contact</h3>
-                    <p>Email: contact@neuraticles.in</p>
-                    <p>Future HQ: Mumbai, India</p>
-                </div>
-            </div>
-            <div class="copyright">
-                &copy; 2024 Neuraticles. All rights reserved. | Powered by Advanced AI
-            </div>
+            <p><strong>Neuraticles</strong> - Fully Automated AI Blogging Platform</p>
+            <p>Email: contact@neuraticles.in | Fully Autonomous Since 2024</p>
         </div>
     </footer>
 
     <script>
-        // Simple analytics and dynamic content
-        document.addEventListener('DOMContentLoaded', function() {
-            // Simulate live metrics updates
-            setInterval(() => {
-                const visitors = document.querySelector('.metric-card:nth-child(1) .metric-value');
-                const revenue = document.querySelector('.metric-card:nth-child(3) .metric-value');
-                
-                // Small random increases to simulate growth
-                let currentVisitors = parseInt(visitors.textContent.replace(',', ''));
-                let currentRevenue = parseInt(revenue.textContent.replace('₨', '').replace(',', ''));
-                
-                visitors.textContent = (currentVisitors + Math.floor(Math.random() * 10)).toLocaleString();
-                revenue.textContent = '₨' + (currentRevenue + Math.floor(Math.random() * 5)).toLocaleString();
-            }, 5000);
-
-            // Smooth scrolling for navigation links
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function (e) {
-                    e.preventDefault();
-                    document.querySelector(this.getAttribute('href')).scrollIntoView({
-                        behavior: 'smooth'
-                    });
-                });
-            });
-        });
+        // Simple automation status
+        console.log("🤖 Neuraticles AI System: ACTIVE");
+        console.log("⏰ Next auto-publish: Within 6 hours");
     </script>
 </body>
-  </html>
+                                      </html>
