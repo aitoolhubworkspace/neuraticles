@@ -1,33 +1,36 @@
 name: 🤖 AI Auto-Publisher
+
 on:
   schedule:
     - cron: '0 */6 * * *'
   workflow_dispatch:
+  push:
 
 jobs:
   generate-content:
     runs-on: ubuntu-latest
+    
     steps:
-      - name: 🚀 Checkout repository
-        uses: actions/checkout@v4
+    - name: 🚀 Checkout repository
+      uses: actions/checkout@v4
+      
+    - name: 🔧 Setup Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.10'
         
-      - name: 🔧 Setup Python
-        uses: actions/setup-python@v4
-        with:
-          python-version: '3.10'
-          
-      - name: 📦 Install dependencies
-        run: pip install requests beautifulsoup4 markdown pytz
-          
-      - name: 🤖 Generate AI Content
-        env:
-          HUGGINGFACE_API_KEY: ${{ secrets.HUGGINGFACE_API_KEY }}
-        run: python automation/ai-writer.py
-        
-      - name: 💾 Auto-Commit Content
-        run: |
-          git config --local user.email "ai-bot@neuraticles.in"
-          git config --local user.name "Neuraticles AI"
-          git add .
-          git diff --staged --quiet || git commit -m "🤖 AI Auto-Publish: New content $(date +'%Y-%m-%d %H:%M')"
-          git push
+    - name: 📦 Install dependencies
+      run: pip install requests
+      
+    - name: 🤖 Generate AI Content
+      env:
+        HUGGINGFACE_API_KEY: ${{ secrets.HUGGINGFACE_API_KEY }}
+      run: python automation/ai-writer.py
+      
+    - name: 💾 Commit and Push Changes
+      run: |
+        git config --local user.email "ai-bot@neuraticles.in"
+        git config --local user.name "Neuraticles AI"
+        git add .
+        git diff --staged --quiet || git commit -m "🤖 AI Auto-Publish: New content"
+        git push
